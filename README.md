@@ -3,8 +3,11 @@
 
 1. Inicie o Docker com o seguinte comando:
 
-docker run -d -p 12000:12000 -it --rm --name armarionet -v "$PWD":/var/www/servidortctp -w /var/www/servidortctp python:2 python ./TCPServer.py
+docker run -d -p 12000:12000 -it --rm --name <nome da empresa> -v "$PWD":/var/www/servidortctp -w /var/www/servidortctp python:2 python ./TCPServer.py
 
+No meu caso o comando foi:
+    docker run -d -p 12000:12000 -it --rm --name empresadesoftware -v "$PWD":/var/www/servidortctp -w /var/www/servidortctp python:2 python ./TCPServer.py
+  
 2. Copie o arquivo HTML que deseja disponibilizar para o Docker, utilizando o comando:
 
 docker cp <nome do arquivo> <nome do container>:<caminho para qual ele será copiado>
